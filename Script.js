@@ -34,10 +34,22 @@ const startBtn = document.getElementById('start-btn');
 const quizContainer = document.getElementById('quiz-container');
 const questionLine = document.getElementById('question-line');
 const answerChoices = document.getElementById('answer-choices');
-const  = document.getElementById('');
-const  = document.getElementById('');
-const  = document.getElementById('');
+const timerTime = document.getElementById('timer');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
+// const  = document.getElementById('');
+// const  = document.getElementById('');
+
+// start quiz
+
+// show stuff
+
+// check answer
+
+// Finish him!💀 (Stop all)
+
+// score
+
+// high score 👾
