@@ -1,6 +1,6 @@
 //Questions
 
-//Commonly used data types do not include____.
+//Commonly used data types do not include:
 //A. strings B. booleans C. alerts D. numbers
 
 //The condition in an if/else statement is enclosed with ____.
@@ -12,5 +12,5 @@
 //String values must be enclosed within ____ when being assigned to variables.
 //A. commas, B. curly brackets, C. quotes, D. parenthesis
 
-//A very usefull tool used during development and debugging for printing content to the debugger is _____.
+//A very usefull tool used during development and debugging for printing content to the debugger is:
 //A. JavaScript, B. terminal/bash, C. for loops, D. console.log
