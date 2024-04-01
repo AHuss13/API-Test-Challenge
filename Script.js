@@ -25,3 +25,19 @@ let questions = [
   answer: "console log"
 }
 ];
+
+let timerInterval;
+let timeLeft = 60;
+let score = 0;
+
+const startBtn = document.getElementById('start-btn');
+const quizContainer = document.getElementById('quiz-container');
+const questionLine = document.getElementById('question-line');
+const answerChoices = document.getElementById('answer-choices');
+const  = document.getElementById('');
+const  = document.getElementById('');
+const  = document.getElementById('');
+// const  = document.getElementById('');
+// const  = document.getElementById('');
+// const  = document.getElementById('');
+// const  = document.getElementById('');
