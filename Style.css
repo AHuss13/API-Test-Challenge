@@ -1,0 +1,6 @@
+
+
+.submit-btn::after {
+  content: "🤖";
+  font-size: 20px;
+}
