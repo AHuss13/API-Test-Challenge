@@ -26,7 +26,7 @@ let questions = [
 }
 ];
 
-let timerInterval;
+let timerInterval = ; //figure this out
 let timeLeft = 60;
 let score = 0;
 
@@ -43,13 +43,23 @@ const timerTime = document.getElementById('timer');
 // const  = document.getElementById('');
 
 // start quiz
+function startQuiz() {
+  showQuestion();
+};
 
 // show stuff
+function showQuestion() {
+
+};
 
 // check answer
+function checkAnswer() {
+
+};
 
 // Finish him!💀 (Stop all)
 
 // score
 
 // high score 👾
+let savedScore = localStorage.getItem("score")
