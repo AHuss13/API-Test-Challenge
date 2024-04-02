@@ -36,21 +36,21 @@ const quizContainer = document.getElementById('quiz-container');
 const questionLine = document.getElementById('question-line');
 const answerChoices = document.getElementById('answer-choices');
 const timerTime = document.getElementById('timer');
-const SubmitBtn = document.getElementById('submit-btn');
+const submitBtn = document.getElementById('submit-btn');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 // const  = document.getElementById('');
 
-startBtn.addEventListener('click', startQuiz)
-SubmitBtn.addEventListener('click', scoreBtn) //rename after getting there
+startBtn.addEventListener('click', startQuiz);
+submitBtn.addEventListener('click', scoreBtn); //rename after getting there
 
 // start quiz
 function startQuiz() {
   showQuestion();
-  timerInterval = setInterval(updateTimer, 1000)
-};
+  timerInterval = setInterval(updateTimer, 1000);
+}
 
 function updateTimer() {
   timerTime.textContent =  timeLeft;
@@ -61,16 +61,15 @@ function updateTimer() {
   }
 }
 
-// show stuff
 function showQuestion() {
   let currentQuestion = questions[questionNumber];
   questionLine.textContent = currentQuestion.title;
   answerChoices.innerHTML = '';
   currentQuestion.choices.forEach(choice=> {
-    let listItem = document.createElement("li");
-    listItem.textContent = choice;
-    listItem.addEventListener('click', () => checkAnswer(choice));
-    answerChoices.appendChild(listItem);
+    let li = document.createElement("li");
+    li.textContent = choice;
+    li.addEventListener('click', () => checkAnswer(choice));
+    answerChoices.appendChild(li);
   })
 };
 
