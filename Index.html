@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-  <div>
+  <div id="title">
     <h1>Javascript Quiz</h1>
     <button id="start-btn"> Start</button>
   </div>
-
-  <div id="timer">Time</div>
+  
+  <div id="timer">Time: 60 seconds</div>
   <div id="quiz-container">
     <h2 id="question-line"></h2>
     <ul id="answer-choices"></ul>
   </div>
 
-  <div>
+  <div id="end-screen" style="display: none">
     <h2>Finished</h2>
-    <p>Score: </p>
+    <p id="end-score">Score: </p>
     <input type="text">
-    <button class="submit-btn">Submit, New Developer!</button>
+    <button id="submit-btn">Submit, New Developer!</button>
   </div>
 
   <script src="Script.js"></script>
