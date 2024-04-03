@@ -26,9 +26,8 @@ let questions = [
 }
 ];
 
-let timerInterval; //figure this out
+let timerInterval;
 let timeLeft = 60;
-let score = 0;
 let questionNumber = 0;
 
 const startBtn = document.getElementById('start-btn');
@@ -37,23 +36,20 @@ const questionLine = document.getElementById('question-line');
 const answerChoices = document.getElementById('answer-choices');
 const timerTime = document.getElementById('timer');
 const submitBtn = document.getElementById('submit-btn');
-// const  = document.getElementById('');
-// const  = document.getElementById('');
-// const  = document.getElementById('');
-// const  = document.getElementById('');
+const finalForm = document.getElementById('end-screen');
 // const  = document.getElementById('');
 
 startBtn.addEventListener('click', startQuiz);
 submitBtn.addEventListener('click', scoreBtn); //rename after getting there
 
-// start quiz
 function startQuiz() {
   showQuestion();
   timerInterval = setInterval(updateTimer, 1000);
+  startBtn.style.display = 'none';
 }
 
 function updateTimer() {
-  timerTime.textContent =  timeLeft;
+  timerTime.textContent = `Time: ${timeLeft} seconds`;
   if (timeLeft === 0) {
     finishHim();
   } else {
@@ -73,7 +69,6 @@ function showQuestion() {
   })
 };
 
-// check answer
 function checkAnswer(choice) {
   let currentQuestion = questions[questionNumber]
   if (choice === currentQuestion.answer) {
@@ -93,10 +88,11 @@ function checkAnswer(choice) {
 
 // Finish him!💀 (Stop all)
 function finishHim () {
-
+  clearInterval(timerInterval);
+  document.getElementById('end-score').textContent = `Score: ${timeLeft}`; // Mismatch in score with time
+  quizContainer.style.display = "none";
+  finalForm.style.display = "block";
 }
 
-// score
-
-// high score 👾
+// score 👾
 let savedScore = localStorage.getItem("score")
