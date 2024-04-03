@@ -1,6 +1,79 @@
-
-
-.submit-btn::after {
+#submit-btn::after {
   content: "🤖";
   font-size: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#end-screen {
+  text-align: center;
+}
+
+#quiz-container {
+  width: 50vw;
+  margin: auto;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  max-width: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px blue;
+}
+
+#submit-btn {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#title {
+  text-align: center;
+  text-decoration: underline;
+  background: linear-gradient(.25turn, blue, red);
+  margin: 5px;
+}
+
+#question-line {
+  text-align: center;
 }
