@@ -37,10 +37,26 @@ const answerChoices = document.getElementById('answer-choices');
 const timerTime = document.getElementById('timer');
 const submitBtn = document.getElementById('submit-btn');
 const finalForm = document.getElementById('end-screen');
-// const  = document.getElementById('');
+const initialsInput = document.getElementById('initials-input');
+
+renderPastScore();
+
+function renderPastScore() {
+  let lastScore = localStorage.getItem("last-score")
+  let lastInitials = localStorage.getItem("initials")
+  const pastAttempt = document.getElementById('last-try');
+  if (!lastScore) {
+  lastScore = 100
+}
+  if (!lastInitials) {
+  lastInitials = `Dinkleberg 😠`
+}
+  pastAttempt.textContent = `Last Attempt: ${lastInitials} - ${lastScore}`;
+
+}
 
 startBtn.addEventListener('click', startQuiz);
-submitBtn.addEventListener('click', scoreBtn); //rename after getting there
+submitBtn.addEventListener('click', saveQuiz); //rename after getting there
 
 function startQuiz() {
   showQuestion();
@@ -86,6 +102,7 @@ function checkAnswer(choice) {
   }
 };
 
+
 // Finish him!💀 (Stop all)
 function finishHim () {
   clearInterval(timerInterval);
@@ -95,4 +112,9 @@ function finishHim () {
 }
 
 // score 👾
-let savedScore = localStorage.getItem("score")
+function saveQuiz() {
+  let initials = initialsInput.value;
+  localStorage.setItem("initials", initials);
+  localStorage.setItem("last-score", timeLeft);
+  renderPastScore();
+}
