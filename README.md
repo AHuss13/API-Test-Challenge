@@ -12,6 +12,8 @@ To begin the quiz, click "start" on the main page. There will be a series of que
 
 ![Page screenshot](/images/Screenshot%202024-04-05%20115745.png)
 
+Deployed page: https://ahuss13.github.io/API-Test-Challenge/
+
 ## License
 
 MIT License
