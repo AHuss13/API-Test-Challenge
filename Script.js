@@ -56,7 +56,7 @@ function renderPastScore() {
 }
 
 startBtn.addEventListener('click', startQuiz);
-submitBtn.addEventListener('click', saveQuiz); //rename after getting there
+submitBtn.addEventListener('click', saveQuiz);
 
 function startQuiz() {
   showQuestion();
